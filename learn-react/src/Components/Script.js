@@ -145,6 +145,7 @@ function getBook(id) {
 
 const book=getBook(2);
 
-const {title,author}=book;
 
-console.log(title,author)
+
+const summary=`${book.title} is a writren book`;
+summary;
