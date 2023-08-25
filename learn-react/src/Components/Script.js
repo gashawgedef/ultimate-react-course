@@ -143,9 +143,12 @@ function getBook(id) {
   return data.find((d) => d.id === id);
 }
 
-const book=getBook(2);
+const book=getBook(3);
+book;
+
+const list=book.map(x=>x.author);
+list;
 
 
 
-const summary=`${book.title} is a writren book`;
-summary;
+
