@@ -1,5 +1,7 @@
 import React, { StrictMode } from "react";
 import ReactDOM from "react-dom/client";
+import "./index.css";
+
 const pizzaData = [
   {
     name: "Focaccia",
@@ -46,30 +48,37 @@ const pizzaData = [
 ];
 
 function Header(){
-  return <h1>Fast React Pizza co.</h1>
+    // const style={color:'red',fontSize:'40px',textTransform:'uppercase'}
+  return (
+    <div>
+        <header className="header footer">
+        <h1 >Fast React Pizza co.</h1>
+        </header>
+    </div>
+  )
 }
 function Menu(){
  return ( 
-     <>  
+     <main className="menu">  
      <h2>Our Menu</h2>
      <Pizza/>
      <Pizza/>
      <Pizza/>
      <Pizza/>
      
-     </>)
+     </main>)
 
 }
 function Footer(){
-  return <footer>{new Date().toLocaleDateString()}  We are currently open</footer>
+  return <footer className="footer">{new Date().toLocaleDateString()}  We are currently open</footer>
 }
 function App() {
   return (
-    <>
+    < div className="container">
      <Header/>
       <Menu />
       <Footer/>
-    </>
+    </div>
   );
 }
 function Pizza() {
