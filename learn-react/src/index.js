@@ -49,18 +49,26 @@ function Header(){
   return <h1>Fast React Pizza co.</h1>
 }
 function Menu(){
+ return ( 
+     <>  
+     <h2>Our Menu</h2>
+     <Pizza/>
+     <Pizza/>
+     <Pizza/>
+     <Pizza/>
+     
+     </>)
 
 }
 function Footer(){
-
+  return <footer>{new Date().toLocaleDateString()}  We are currently open</footer>
 }
 function App() {
   return (
     <>
      <Header/>
-      <Pizza />
-      <Pizza />
-      <Pizza />
+      <Menu />
+      <Footer/>
     </>
   );
 }
