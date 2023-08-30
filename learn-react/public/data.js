@@ -1,5 +1,3 @@
-import React, { StrictMode } from "react";
-import ReactDOM from "react-dom/client";
 const pizzaData = [
   {
     name: "Focaccia",
@@ -44,29 +42,3 @@ const pizzaData = [
     soldOut: false,
   },
 ];
-
-function App() {
-  return (
-    <>
-      <Pizza />
-      <Pizza />
-      <Pizza />
-    </>
-  );
-}
-function Pizza() {
-  return (
-    <>
-       <img src="pizzas/focaccia.jpg" alt="Pizza Image"/>
-      <h1>Focaccia</h1>
-      <p>Bread with italian olive oil and rosemary</p>
-    </>
-  );
-}
-
-const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(
-  <StrictMode>
-    <App />
-  </StrictMode>
-);
