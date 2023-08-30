@@ -61,14 +61,31 @@ function Menu(){
  return ( 
      <main className="menu">  
      <h2>Our Menu</h2>
-     <Pizza/>
-     <Pizza/>
-     <Pizza/>
-     <Pizza/>
+     <Pizza name="Focaccia" 
+     ingredients="Bread with italian olive oil and rosemary"
+      photoName="pizzas/focaccia.jpg"
+       price={10} />
+
+<Pizza name="Pizza Funghi" 
+     ingredients="Tomato, mozarella, mushrooms, and onion"
+      photoName="pizzas/funghi.jpg"
+       price={10} />
+   
      
      </main>)
 
 }
+function Pizza(props) {
+    return (
+      <div className="pizza">
+         <img src={props.photoName}alt="Pizza Image"/>
+         <div>
+        <h1>{props.name}</h1>
+        <p>{props.ingredients}</p>
+        </div>
+      </div>
+    );
+  }
 function Footer(){
   return <footer className="footer">{new Date().toLocaleDateString()}  We are currently open</footer>
 }
@@ -81,15 +98,7 @@ function App() {
     </div>
   );
 }
-function Pizza() {
-  return (
-    <>
-       <img src="pizzas/focaccia.jpg" alt="Pizza Image"/>
-      <h1>Focaccia</h1>
-      <p>Bread with italian olive oil and rosemary</p>
-    </>
-  );
-}
+
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
